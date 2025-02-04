@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boris Houle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e1f3e68a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <button id="translate-btn">Français</button>
+
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span class="brand" data-en="Boris Houle" data-fr="Boris Houle">Boris Houle</span>
+                <ul id="sidemenu">
+                    <li><a href="#header" data-en="Home" data-fr="Accueil">Home</a></li>
+                    <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+                    <li><a href="#projects" data-en="Skills" data-fr="Compétences">Skills</a></li>
+                    <li><a href="#portfolio" data-en="Portfolio" data-fr="Portfolio">Portfolio</a></li>
+                    <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p data-en="Electrical Engineering Student" data-fr="Étudiant en Génie Électrique">Electrical Engineering Student</p>
+                <h1 data-en="Hi, my name is Boris" data-fr="Bonjour, je m'appelle Boris">Hi, my name is Boris</h1>
+                <p1 data-en="Student at Sherbrooke's University" data-fr="Étudiant à l'Université de Sherbrooke">Student at Sherbrooke's University</p1><br>
+                <!-- Download Resume Button -->
+                <a href="resumes/Boris Houle English Resume.pdf" download class="btn-resume">Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/AboutSection.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle" data-en="About Me" data-fr="À propos de moi">About Me</h1>
+                    <p data-en="I am a future electrical engineer passionate about robotics, learning, and challenging my peers. I love the outdoors (skiing is a big thing for me), but I also love staying inside geeking around my math books, playing video game or cooking ramen."
+                       data-fr="Je suis un futur ingénieur électrique passionné par la robotique, l'apprentissage et le dépassement de soi. J'adore les activités de plein air (le ski est très important pour moi), mais j'aime aussi passer du temps avec ma famille et cuisiner des recettes de Ricardo.">
+                        I am a future electrical engineer passionate about robotics, learning, and challenging my peers. I love the outdoors (skiing is a big thing for me), but I also love staying inside geeking around my math books.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" data-en="Hobbies" data-fr="Loisirs">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('experience')" data-en="Work Experience" data-fr="Expérience de travail">Working Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" data-en="Education" data-fr="Formation">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <h3 data-en="Skiing" data-fr="Ski">Skiing</h3>
+                                <p data-en="Capable of doing a 360 spin" data-fr="Capable de faire une rotation de 360 degrés">Capable of doing a 360 spin</p>
+                            </li>
+                            <li>
+                                <h3 data-en="Wakesurfing" data-fr="Wakesurf">Wakesurfing</h3>
+                                <p data-en="Also capable of doing a 360 degree spin" data-fr="Aussi capable de faire une rotation de 360 degrés">Also capable of doing a 360 degree spin</p>
+                            </li>
+                            <li>
+                                <h3 data-en="3D printing" data-fr="Impression 3D">3D printing</h3>
+                                <p data-en="Creating and modeling complex gear mechanism" data-fr="Création et modélisation de méchanisme à engrenage">Creating and modeling</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <h3 data-en="LifeGuard" data-fr="Sauveteur">LifeGuard</h3>
+                                <p data-en="Lifeguard for the Magog's city beach" data-fr="Sauveteur pour la plage de la ville de Magog">Lifeguard for the Magog's city beach</p>
+                            </li>
+                            <li>
+                                <h3 data-en="Tutor" data-fr="Tuteur">Tutor</h3>
+                                <p data-en="Adapting my communication skills to the student's needs" data-fr="Adaptation de mes compétences en communication aux besoins de l'étudiant">Adapting my communication skills to the student's needs</p>
+                            </li>
+                            <li>
+                                <h3 data-en="Golf Caddy" data-fr="Caddy de Golf">Golf Caddy</h3>
+                                <p data-en="Caddying at the Memphremagog golf's club" data-fr="Caddet pour le club de golf Memphrémagog">Golf Caddy</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <h3 data-en="University of Sherbrooke" data-fr="Université de Sherbrooke">University of Sherbrooke</h3>
+                                <p data-en="Undergrad studies in Electrical Engineering" data-fr="Baccalauréat Génie électrique">Electrical Engineering</p>
+                            </li>
+                            <li>
+                                <h3 data-en="College Jean-de-Brébeuf" data-fr="Collège Jean-de-Brébeuf">College Jean-de-Brébeuf</h3>
+                                <p data-en="Pure and Applied Science" data-fr="Sciences pures et appliquées">Pure and Applied Science</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle" data-en="My Skills" data-fr="Mes compétences">My Projects</h1>
+            <div class="projects-list">
+                <div class="project-card">
+                    <i class="fas fa-bolt"></i>
+                    <h2 data-en="Electrical" data-fr="Électrique">Electrical</h2>
+                    <ul>
+                        <li>Altium</li>
+                        <li>LTspice</li>
+                        <li>AutoCAD</li>
+                    </ul>
+                    <a href="#portfolio" class="btn-learn" data-en="Learn more" data-fr="En savoir plus">Learn more</a>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-code"></i>
+                    <h2 data-en="Programming" data-fr="Programmation">Programming</h2>
+                    <ul>
+                        <li>C/C++, C#, HTML, CSS</li>
+                        <li>Python, GitHub</li>
+                        <li>VSCode, PyCharm, Linux</li>
+                    </ul>
+                    <a href="#portfolio" class="btn-learn" data-en="Learn more" data-fr="En savoir plus">Learn more</a>
+                </div>
+                <div class="project-card">
+                    <i class="fas fa-robot"></i>
+                    <h2 data-en="Robotic" data-fr="Robotique">Robotic</h2>
+                    <ul>
+                        <li>SolidWorks</li>
+                        <li>AutoCAD</li>
+                        <li>Fusion 360</li>
+                    </ul>
+                    <a href="#portfolio" class="btn-learn" data-en="Learn more" data-fr="En savoir plus">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle" data-en="My Work" data-fr="Mon Travail">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/ProjectPCBS2.png">
+                    <div class="layer">
+                        <h3 data-en="Gaming Controller" data-fr="Manette de Jeu vidéo">Project 1</h3>
+                        <p data-en="Design and build a PCB for a flight simulator game, using Altium." data-fr="Conception d'un PCB, en utilisant Altium, pour une manette de jeu de simulation de vol.">Description</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/ProjetMécaniqueS1.png">
+                    <div class="layer">
+                        <h3 data-en="Mechanical Claw" data-fr="Pince mécanique">Project 2</h3>
+                        <p data-en="Design, printed and assembled a rack and pinion claw. Designed to manipulate Jenga block. I also buil the infinite vis mechanism to move the claw up and down using a stepper motor." data-fr="Concevoir, imprimer et assembler une pince à pignon et crémaillère; Conçu pour manipuler des blocs Jenga. J'ai également construit le mécanisme de vis sans fin pour déplacer la pince de haut en bas à l'aide d'un moteur pas à pas.">Description</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/ProjetPIDS2.png">
+                    <div class="layer">
+                        <h3 data-en="PID Servo Control" data-fr="Control par PID">Project 3</h3>
+                        <p data-en="I designed and built a PID-controlled system to balance a ping-pong ball on a seesaw. Using an ultrasonic sensor, I measured the distance between the ball and the end of the seesaw, which provided the relative position of the ball to the center. This project was coded in C++ using VSCode." data-fr="J'ai conçu et construit un système contrôlé par un régulateur PID pour équilibrer une balle de ping-pong sur une balançoire. En utilisant un capteur à ultrasons, j'ai mesuré la distance entre la balle et l'extrémité de la balançoire, ce qui m'a permis de déterminer la position relative de la balle par rapport au centre. Ce projet a été programmé en C++ avec VSCode.">Description</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn" data-en="See more" data-fr="Voir plus">See more</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="contact">
+                <h1 class="sub-title" data-en="Contact me!" data-fr="Contactez-moi !">Contact me!</h1>
+                <div class="contact-box">
+                    <p><i class="fa-solid fa-envelope"></i><a href="mailto:houb4160@usherbrooke.ca">houb4160@usherbrooke.ca</a></p>
+                    <div class="social-icons">
+                        <p>
+                            <a href="https:www.linkedin.com/in/borishoule" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i> <span data-en="LinkedIN" data-fr="LinkedIN">LinkedIN</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p data-en="Copyright © Boris Houle" data-fr="Droits d'auteur © Boris Houle">Copyright © Boris Houle</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Translation -->
+    <script>
+        // Function to switch tabs in the "About Me" section
+function opentab(tabname) {
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    // Remove the "active-link" class from all tab links
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+
+    // Remove the "active-tab" class from all tab contents
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    // Add the "active-link" class to the clicked tab link
+    event.currentTarget.classList.add("active-link");
+
+    // Add the "active-tab" class to the corresponding tab content
+    document.getElementById(tabname).classList.add("active-tab");
+}
+    </script>
+
+    <script>
+        const translateButton = document.getElementById("translate-btn");
+        let currentLanguage = "en"; // Default language is English
+
+        // Function to translate the website
+        function translatePage(language) {
+            const elements = document.querySelectorAll("[data-en], [data-fr]");
+            elements.forEach((element) => {
+                if (language === "en") {
+                    element.textContent = element.getAttribute("data-en");
+                } else if (language === "fr") {
+                    element.textContent = element.getAttribute("data-fr");
+                }
+            });
+        }
+
+        // Toggle between English and French
+        translateButton.addEventListener("click", function () {
+            if (currentLanguage === "en") {
+                currentLanguage = "fr"; // Switch to French
+                translateButton.textContent = "English"; // Update button text
+            } else {
+                currentLanguage = "en"; // Switch back to English
+                translateButton.textContent = "Français"; // Update button text
+            }
+            translatePage(currentLanguage); // Translate the page
+        });
+
+        // Initialize the page with the default language
+        translatePage(currentLanguage);
+    </script>
+</body>
+</html>
