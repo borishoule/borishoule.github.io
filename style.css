@@ -270,11 +270,143 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Section stages */
+
+#internships {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.stage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.internship-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.internship-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.internship-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+
+.duration {
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.internship-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.internship-item.active {
+    min-height: 100px;
+}
+
+.internship-item.active .internship-details {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 20px;
+    margin-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .internship-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .duration {
+        margin-top: 5px;
+    }
+    
+    .internship-item {
+        padding: 20px;
+    }
+}
+
+
+/* Internship Details Styling */
+.internship-details {
+    padding-top: 15px;
+}
+
+.description-block {
+    margin-bottom: 20px;
+}
+
+.description-text {
+    line-height: 1.6;
+}
+
+.english, .french {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.internship-tasks {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.task-item {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 15px;
+}
+
+.task-item::before {
+    position: absolute;
+    left: 0;
+    color: #2c3e50;
+}
+
+.task-item .english {
+    display: block;
+    margin-bottom: 4px;
+}
+
+
 
 /* Portfolio Section */
 #portfolio {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Light background for better contrast */
+    background-color: #f9f9f9; 
 }
 
 .work-list {

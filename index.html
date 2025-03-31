@@ -26,12 +26,10 @@
             </nav>
             <div class="header-text">
                 <p data-en="Electrical Engineering Student" data-fr="Étudiant en Génie Électrique">Electrical Engineering Student</p>
-                <h1 data-en="Hi, my name is Boris" data-fr="Bonjour, je m'appelle Boris">Hi, my name is Boris</h1>
+                <h1 data-en="Hi, my name is Boris" data-fr="Salut, moi c'est Boris">Hi, my name is Boris</h1>
                 <p1 data-en="Student at Sherbrooke's University" data-fr="Étudiant à l'Université de Sherbrooke">Student at Sherbrooke's University</p1><br>
                 <!-- Download Resume Button -->
-                <a href="resumes/Boris Houle English Resume.pdf" download class="btn-resume">
-                    <span data-en="Download Resume" data-fr="Télécharger mon CV">Download Resume</span>
-                </a>
+                <a href="resumes/Boris Houle English Resume.pdf" download class="btn-resume">Download Resume</a>
             </div>
         </div>
     </div>
@@ -143,6 +141,39 @@
     </div>
     
 
+<!-- Internships Section / Section Stages -->
+<div id="internships">
+    <div class="container">
+        <h1 class="subtitle" data-en="Internships" data-fr="Stages">Internships / Stages</h1>
+        <div class="stage-list">
+            <div class="internship-item">
+                <div class="internship-header">
+                    <h3>MDA Space</h3>
+                    <p class="duration" data-en="Summer 2025" data-fr="Été 2025">Summer 2025 / Été 2025</p>
+                </div>
+                <div class="internship-details">
+                    <div class="description-block">
+                        <p class="description-text">
+                            <span class="english" data-en="Worked as an electrical engineering intern on satellite systems" data-fr="Stagiaire en tant qu'ingénieur électrique pour des systèmes satellitaires">Worked as an electrical engineering intern on satellite systems</span>
+                        </p>
+                    </div>
+                    <ul class="internship-tasks">
+                        <li class="task-item">
+                            <span class="english" data-en="Designed PCB layouts using Altium Designer" data-fr="Conception de PCB à l'aide d'Altium Designer">Designed PCB layouts using Altium Designer</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="english" data-en="Developed test procedures for satellite components" data-fr="Développement de procédures de test pour des composants satellitaires">Developed test procedures for satellite components</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="english" data-en="Participated in design reviews and team meetings" data-fr="Participation active aux revues de conception et aux réunions d'équipe">Participated in design reviews and team meetings</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
@@ -251,6 +282,26 @@ function opentab(tabname) {
 
         // Initialize the page with the default language
         translatePage(currentLanguage);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const internshipItems = document.querySelectorAll('.internship-item');
+            
+            internshipItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Close all other open items
+                    internshipItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    this.classList.toggle('active');
+                });
+            });
+        });
     </script>
+
+    
 </body>
 </html>
